@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sổ Riêng – sổ bán hàng offline</title>
+<meta name="description" content="Sổ Riêng: app Android quản lý kho, phiếu bán, báo giá, công nợ, serial, bảo hành, lãi lỗ. Chạy offline, dữ liệu nằm trên máy bạn. Dùng thử miễn phí 2 tháng.">
+<link rel="icon" href="img/icon.png">
+<style>
+:root{--red:#C0282D;--dark:#1A1716;--bg:#FBF8F6;--card:#fff;--text:#1A1716;--muted:#6B6260;--line:#E8E1DE}
+@media (prefers-color-scheme:dark){:root{--bg:#141110;--card:#1F1B1A;--text:#F2ECEA;--muted:#A99F9C;--line:#332C2A}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--red)}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+header{background:var(--dark);color:#fff;padding:48px 0 40px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:64px;height:64px;border-radius:14px}
+.brand h1{margin:0;font-size:34px}
+.tag{font-size:20px;margin:18px 0 6px;max-width:640px}
+.sub{color:#CFC6C3;margin:0 0 24px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:700;text-decoration:none}
+.btn.p{background:var(--red);color:#fff}
+.btn.s{border:2px solid #fff;color:#fff}
+.note{font-size:14px;color:#CFC6C3;margin-top:12px}
+h2{font-size:26px;margin:48px 0 16px}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:18px}
+.shot{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.shot img{width:100%;display:block}
+.shot p{margin:0;padding:10px 14px 14px;font-size:15px}
+.shot b{display:block}
+.honest{background:var(--card);border-left:5px solid var(--red);border-radius:10px;padding:16px 20px}
+.honest li{margin:6px 0}
+ol li{margin:8px 0}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:10px 0}
+summary{font-weight:700;cursor:pointer}
+footer{margin-top:56px;padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <div class="brand"><img src="img/icon.png" alt=""><h1>Sổ Riêng</h1></div>
+  <p class="tag">Sổ bán hàng trên điện thoại cho ae kỹ thuật, thợ điện, thợ camera, đại lý thiết bị và cửa hàng nhỏ.</p>
+  <p class="sub">Kho, phiếu nhập/bán, báo giá, công nợ, serial, bảo hành, công trình, lãi lỗ. Chạy không cần mạng, dữ liệu nằm trên máy bạn.</p>
+  <div class="btns">
+   <a class="btn p" href="https://github.com/dinhdang175/SoRieng/releases/latest">Tải app – dùng thử 2 tháng</a>
+   <a class="btn s" href="#video">Video hướng dẫn</a>
+  </div>
+  <p class="note">Android 8 trở lên · file APK cài trực tiếp (chưa có trên Google Play)</p>
+ </div>
+</header>
+
+<main class="wrap">
+ <h2>Làm được gì</h2>
+ <div class="shots">
+  <div class="shot"><img src="img/tong-quan.jpg" alt="Màn tổng quan" loading="lazy"><p><b>Tổng quan</b>Doanh thu, lãi tháng này, khách nợ, hàng sắp hết.</p></div>
+  <div class="shot"><img src="img/phieu.jpg" alt="Danh sách phiếu" loading="lazy"><p><b>Phiếu nhập, bán, báo giá</b>Hoá đơn và báo giá PDF có logo shop, mã VietQR đúng số tiền.</p></div>
+  <div class="shot"><img src="img/san-pham.jpg" alt="Chi tiết sản phẩm" loading="lazy"><p><b>Kho hàng</b>Tồn kho tự tính từ phiếu, giá vốn trung bình, tem QR.</p></div>
+  <div class="shot"><img src="img/tra-cuu-sn.jpg" alt="Tra cứu serial" loading="lazy"><p><b>Serial và bảo hành</b>Gõ hoặc quét SN: bán cho ai, ngày nào, còn bảo hành không.</p></div>
+  <div class="shot"><img src="img/cong-no.jpg" alt="Công nợ" loading="lazy"><p><b>Công nợ</b>Khách nợ mình, mình nợ nhà cung cấp, thanh toán nhiều đợt.</p></div>
+  <div class="shot"><img src="img/cong-trinh.jpg" alt="Công trình" loading="lazy"><p><b>Công trình</b>Gom phiếu và chi phí, ra lãi lỗ từng công trình.</p></div>
+  <div class="shot"><img src="img/thong-ke.jpg" alt="Thống kê" loading="lazy"><p><b>Lãi thật</b>Doanh thu trừ giá vốn, ship, chi phí phát sinh ra lãi ròng.</p></div>
+ </div>
+ <p style="color:var(--muted);font-size:14px">Ảnh chụp với dữ liệu mẫu.</p>
+
+ <h2>Bảo mật và sao lưu</h2>
+ <ul>
+  <li>Mở app bằng mật khẩu chính hoặc vân tay; dữ liệu trên máy được mã hoá.</li>
+  <li>App tự sao lưu hằng ngày ra thư mục bạn chọn; file sao lưu cũng được mã hoá bằng mật khẩu chính.</li>
+  <li>Nên chép file sao lưu ra máy tính hoặc Google Drive: mất máy là mất luôn bản sao lưu nằm trong máy.</li>
+ </ul>
+
+ <h2>Nói thật trước khi dùng</h2>
+ <div class="honest"><ul>
+  <li>Chỉ có Android, chưa có bản máy tính hay iPhone.</li>
+  <li>Bản quyền theo từng máy: mỗi máy một bản quyền.</li>
+  <li>Không đồng bộ đám mây: dữ liệu chỉ nằm trên máy bạn. Hãy chọn thư mục sao lưu trong app (app tự sao lưu hằng ngày, file sao lưu được mã hoá).</li>
+  <li>Không hỗ trợ cài đặt riêng từng người; có video hướng dẫn từng chức năng. Lỗi phần mềm được sửa qua bản cập nhật.</li>
+  <li>Cài bằng file APK nên Android sẽ hỏi "cho phép cài ứng dụng không rõ nguồn" – đó là bình thường với app ngoài Google Play.</li>
+ </ul></div>
+
+ <h2>Cài đặt</h2>
+ <ol>
+  <li>Bấm <a href="https://github.com/dinhdang175/SoRieng/releases/latest">Tải app</a>, chọn file <b>SoRieng-….apk</b> ở mục Assets.</li>
+  <li>Mở file vừa tải, cho phép trình duyệt cài ứng dụng khi Android hỏi.</li>
+  <li>Nếu Play Protect cảnh báo, chọn "Vẫn cài đặt".</li>
+  <li>Mở app, tạo mật khẩu chính (nhớ kỹ – quên là không mở được dữ liệu).</li>
+  <li>Vào Thêm → Sao lưu, chọn thư mục sao lưu.</li>
+ </ol>
+ <p>Bản mới: tải và cài đè lên bản cũ, dữ liệu giữ nguyên.</p>
+
+ <h2 id="video">Video hướng dẫn</h2>
+ <p>Playlist "Hướng dẫn Sổ Riêng" trên kênh YouTube <b>Đình Đăng Automation</b> (đang cập nhật).</p>
+
+ <h2>Câu hỏi thường gặp</h2>
+ <details><summary>Dùng thử có giới hạn tính năng không?</summary><p>Không. 2 tháng dùng thử đủ mọi tính năng.</p></details>
+ <details><summary>Hết 2 tháng thì sao?</summary><p>Dữ liệu không mất: vẫn xem, sao lưu, xuất file được, chỉ không thêm/sửa. Muốn dùng tiếp thì mua bản quyền 1 lần cho 1 máy ngay trong app (Thêm → Bản quyền), không thu phí hằng tháng. Điều khoản đầy đủ xem trong app.</p></details>
+ <details><summary>Dữ liệu có gửi đi đâu không?</summary><p>Không. App không có máy chủ, không cần tài khoản. Dữ liệu được mã hoá trên máy bạn.</p></details>
+ <details><summary>Có nhập dữ liệu từ Excel được không?</summary><p>Có, qua file CSV (Thêm → Nhập / xuất file CSV). Lưu ý file CSV không được mã hoá.</p></details>
+ <details><summary>Báo lỗi ở đâu?</summary><p>Qua email ghi trong app (Thêm → Bản quyền).</p></details>
+</main>
+
+<footer><div class="wrap">Sổ Riêng · Đình Đăng Automation</div></footer>
+</body>
+</html>
